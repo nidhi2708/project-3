@@ -1,0 +1,9 @@
+def most_frequent(s):
+    d = defaultdict(int)
+    for c in s:
+        d[c] += 1
+
+    return "".join([
+        k for k, v in sorted(
+        d.iteritems(), reverse=True, key=lambda (k, v): v)
+    ])
